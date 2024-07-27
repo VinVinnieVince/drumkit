@@ -1,10 +1,30 @@
-let keypressed = document.querySelector('.keyA');
+let keyPressed = document.querySelector('.keyA');
 
 const body = document.querySelector('body');
-body.addEventListener('keydown', () => {
-    keypressed.classList.add('active');
+body.addEventListener('keydown', (e) => {
+    switch (e.key){
+        case 'a':
+            keyPressed = document.querySelector('.keyA');
+            break;
+        case 's':
+            keyPressed = document.querySelector('.keyS');
+            break;
+        default:
+            return;
+    }
+    keyPressed.classList.add('active');
 });
 
-body.addEventListener('keyup', () => {
-    keypressed.classList.remove('active');
+body.addEventListener('keyup', (e) => {
+    switch (e.key){
+        case 'a':
+            keyPressed = document.querySelector('.keyA');
+            break;
+        case 's':
+            keyPressed = document.querySelector('.keyS');
+            break;
+        default:
+            return;
+    }
+    keyPressed.classList.remove('active');
 });
