@@ -1,0 +1,40 @@
+body {
+    background-color: #333333;
+    color: #ffdd99;
+}
+
+/* grouping all flex properties */
+.keyrow,
+.keyrow div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.keyrow {
+    position: absolute;
+    flex: auto;
+    height: 100%;
+    width: 100%;
+    gap: 50px;
+}
+
+.keyrow div {
+    flex-flow: column;
+    flex: initial;
+    height: 100px;
+    width: 100px;
+    gap: 10px;
+    background-color: rgb(77, 77, 77);
+    border-radius: 10px;
+    transition: all 0.05s;
+}
+
+.keyrow div * { margin: 0; }
+
+/* When key is active */
+.active {
+    transform: scale(1.1);
+    border: 2px solid #ffcc00;
+    box-shadow: 0 0 10px #ffcc00;
+}
