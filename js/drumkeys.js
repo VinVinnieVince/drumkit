@@ -33,10 +33,29 @@ function deactivate(e) {
     if (keyClass) {
         keyClass.classList.remove('active');
     }
-}
+};
+
+allAudio = document.querySelectorAll('audio');
+allAudio.forEach ((audio) => {
+    audio.preload = 'auto';
+});
+
+function playSound(e) {
+    if (!(isAlphaNumeric(e.key))) return;
+    let caps = String(e.key).toUpperCase();
+    let audio = document.querySelector(`audio[data-sound="${caps}"]`);
+
+    if (!audio) { return };
+
+    audio.currentTime = 0;
+    audio.play();
+};
 
 // to allow EventListener to work for entire page, target body or window
 const body = document.querySelector('body');
-body.addEventListener('keydown', activate);
+body.addEventListener('keydown', (e) => {
+    playSound(e);
+    activate(e);
+});
 
 body.addEventListener('keyup', deactivate);
