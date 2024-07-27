@@ -6,11 +6,22 @@ body {
 }
 
 /* grouping all flex properties */
+.switchBar,
 .keyrow,
 .keyrow div {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.switchBar a {
+    color: #ffdd99;
+    font-family: 'Zilla Slab', monospace;
+    text-decoration: none;
+}
+
+.switchBar a:hover {
+    text-decoration: underline;
 }
 
 .keyrow {
