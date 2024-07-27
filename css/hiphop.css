@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 body {
-    background-color: #333333;
-    color: #ffdd99;
+    background-color: #1a1a1a;
+    color: #cc0000;
 }
 
 /* grouping all flex properties */
@@ -27,7 +27,7 @@ body {
     height: 100px;
     width: 100px;
     gap: 10px;
-    background-color: rgb(77, 77, 77);
+    background-color: #262626;
     border-radius: 10px;
     transition: all 0.05s;
 }
@@ -39,6 +39,6 @@ body {
 /* When key is active */
 .active {
     transform: scale(1.1);
-    border: 2px solid #ffcc00;
-    box-shadow: 0 0 10px #ffcc00;
+    border: 2px solid #cc2900;
+    box-shadow: 0 0 10px #cc2900;
 }
